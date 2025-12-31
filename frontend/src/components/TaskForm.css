@@ -1,0 +1,36 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-form input, .task-form textarea {
+    background: #252525;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.task-form input:focus, .task-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #2a2a2a;
+}
+
+.btn-add-task {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-add-task:hover {
+    background: #2563eb;
+}

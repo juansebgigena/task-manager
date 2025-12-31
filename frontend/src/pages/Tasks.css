@@ -1,0 +1,102 @@
+.task-page-container {
+    min-height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 0 10% 40px 10%;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 40px;
+}
+
+.user-info h1 {
+    font-size: 2rem;
+    margin: 0;
+    background: linear-gradient(90deg, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-text {
+    color: #888;
+    margin-top: 5px;
+}
+
+.welcome-text strong {
+    color: #3b82f6;
+}
+
+.creation-section {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.controls-section {
+    margin-bottom: 30px;
+}
+
+.controls-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #181818;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+.controls-wrapper > * {
+    flex: 1;
+    min-width: 200px;
+}
+
+.results-count {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.list-section {
+    margin-top: 20px;
+}
+
+.btn-logout {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #ef4444;
+    color: white;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 768px) {
+    .task-page-container {
+        padding: 0 5% 20px 5%;
+    }
+    
+    .task-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

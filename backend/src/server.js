@@ -1,0 +1,19 @@
+import app from "./app.js";
+import sequelize from "./config/database.js"
+
+const PORT = process.env.PORT || 3000;
+
+async function bootstrap() {
+    try {
+        await sequelize.authenticate();
+        console.log("Database connected");
+
+        app.listen(PORT, () => {
+            console.log(`Backend running on port ${PORT}`);
+        });
+    } catch (error) {
+        console.error("Failed to start server:", error);
+    }
+}
+
+bootstrap();
