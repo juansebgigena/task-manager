@@ -57,6 +57,7 @@ git clone https://github.com/juansebgigena/task-manager.git
 
 2️⃣ Configurar variables de entorno
 Crear un archivo .env en el backend con las siguientes variables:
+```bash
 NODE_ENV=dev
 PORT=3000
 FRONTEND_URL=http://localhost:5173
@@ -67,9 +68,12 @@ DB_NAME=tasks_db
 DB_USER=root
 DB_PASSWORD=root
 DB_DIALECT=mysql
+```
 
 Crear un archivo .env en el frontend con las siguientes variables:
+```bash
 VITE_API_URL=http://localhost:3000/api
+```
 
 3️⃣ Levantar la base de datos con Docker
 ```bash
