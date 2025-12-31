@@ -80,10 +80,9 @@ VITE_API_URL=http://localhost:3000/api
 docker-compose up -d
 ```
 
-4️⃣ Levantar Backend, crear y popular tablas
+4️⃣ Levantar Backend, crear y popular tablas.
 El proyecto utiliza **Sequelize CLI** para gestionar la estructura de la base de datos. Una vez que el contenedor de Docker esté corriendo y el backend configurado, ejecuta los siguientes comandos desde la carpeta `/backend`:
 
-Backend
 ```bash
 cd backend
 npm install
@@ -91,8 +90,7 @@ npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 npm run dev
 ```
-5️⃣ Levantar Frontend
-Frontend
+5️⃣ Levantar Frontend:
 ```bash
 cd frontend
 npm install
