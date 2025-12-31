@@ -52,32 +52,42 @@ Antes de comenzar, asegurate de tener instalado:
 
 1️⃣ Clonar el repositorio
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/juansebgigena/task-manager.git
 ```
 
 2️⃣ Configurar variables de entorno
 Crear un archivo .env en el backend con las siguientes variables:
-PORT=4000
+NODE_ENV=dev
+PORT=3000
+FRONTEND_URL=http://localhost:5173
+JWT_SECRET=supersecret
 DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=tasks_db
 DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=task_manager
-JWT_SECRET=your_jwt_secret
+DB_PASSWORD=root
+DB_DIALECT=mysql
+
+Crear un archivo .env en el frontend con las siguientes variables:
+VITE_API_URL=http://localhost:3000/api
 
 3️⃣ Levantar la base de datos con Docker
 ```bash
 docker-compose up -d
 ```
 
-4️⃣ Instalar dependencias y correr servidor
+4️⃣ Levantar Backend, crear y popular tablas
+El proyecto utiliza **Sequelize CLI** para gestionar la estructura de la base de datos. Una vez que el contenedor de Docker esté corriendo y el backend configurado, ejecuta los siguientes comandos desde la carpeta `/backend`:
 
 Backend
 ```bash
 cd backend
 npm install
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
 npm run dev
 ```
-
+5️⃣ Levantar Frontend
 Frontend
 ```bash
 cd frontend
